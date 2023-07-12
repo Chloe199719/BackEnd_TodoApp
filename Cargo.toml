@@ -1,0 +1,27 @@
+[package]
+name = "backend_todo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4"
+disel_todo = "0.2.0"
+serde = { version = "1.0", features = ["derive"] }
+env_logger = "0.8"
+log = "0.4"
+strum_macros = "0.24"
+strum = { version = "0.24", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
+ring = "0.16"
+crypto-hash = "0.3.4"
+cookie = "0.15"
+[dependencies.uuid]
+version = "1.4.0"
+features = [
+    "serde",             # Enables serialization/deserialization support
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
