@@ -35,7 +35,7 @@ pub async fn login(body: Json<LoginEmail>) -> HttpResponse {
         token: hex_string.clone(),
         expires_at: chrono::Utc::now().naive_utc() + chrono::Duration::days(7),
         user_id: user.id,
-    }).unwrap();
+    }).unwrap(); // Error Handling Required
 
     let response =  HttpResponse::Ok().cookie( actix_web::cookie::Cookie::build("session", hex_string).http_only(true).http_only(true).same_site(SameSite::Strict).expires(test.unwrap()).max_age(Duration::days(7)).finish()).body("Logged In");
 
