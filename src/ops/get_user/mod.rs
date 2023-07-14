@@ -10,7 +10,6 @@ pub struct User {
     id: String,
     username: String,
     email: String,
-    password: String,
     email_verified: bool,
 }
 
@@ -22,7 +21,6 @@ pub async fn user_by_id(id: Path<UserIdentity>) -> Json<User> {
         id: user.id.to_string(),
         username: user.username,
         email: user.email,
-        password: user.password,
         email_verified: user.email_verified,
     };
     Json(user)

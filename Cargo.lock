@@ -286,6 +286,7 @@ dependencies = [
  "cookie 0.15.2",
  "crypto-hash",
  "disel_todo",
+ "dotenvy",
  "env_logger",
  "log",
  "ring",
@@ -586,9 +587,9 @@ checksum = "212d0f5754cb6769937f4501cc0e67f4f4483c8d2c3e1e922ee9edbe4ab4c7c0"
 
 [[package]]
 name = "disel_todo"
-version = "0.2.0"
+version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a129faad7753eea33f2743ef5101bad9a78eb298b242bde09771a303df8181a"
+checksum = "03052a0fa5df9fbf79d02ea49185429eca8ca2a2f407f2a9b6442ad6c7285a78"
 dependencies = [
  "chrono",
  "diesel",
